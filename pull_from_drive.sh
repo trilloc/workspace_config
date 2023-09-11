@@ -27,7 +27,7 @@ else
 fi
 
 # Stop MongoDB
-service mongod stop
+mongod --shutdown
 
 # Restore MongoDB data
 mongorestore /workspace/mongo_backup
