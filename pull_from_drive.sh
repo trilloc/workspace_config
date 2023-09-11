@@ -33,5 +33,5 @@ mongod --shutdown
 mongorestore /workspace/mongo_backup
 
 # Start MongoDB
-service mongod start
+mongod --fork --logpath /var/log/mongod.log
 
