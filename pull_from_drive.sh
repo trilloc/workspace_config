@@ -3,8 +3,13 @@
 # Define the path to the lockfile
 LOCKFILE="/workspace/.version_lock"
 
+# Check if .version_lock exists, if not, initialize it
+if [ ! -f /workspace/.version_lock ]; then
+    echo "0.0.0" > /workspace/.version_lock
+fi
+
 # Fetch the remote version
-drive pull --no-prompt --exclude="*" $LOCKFILE
+drive pull --no-prompt $LOCKFILE
 REMOTE_VERSION=$(cat $LOCKFILE)
 
 # Check the local version
