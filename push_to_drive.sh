@@ -29,5 +29,5 @@ else
 fi
 
 # Start MongoDB
-service mongod start
+mongod --fork --logpath /var/log/mongod.log
 
