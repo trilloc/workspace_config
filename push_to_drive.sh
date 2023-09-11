@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Stop MongoDB
-service mongod stop
+mongod --shutdown
 
 # Dump MongoDB data
 mongodump --out=/workspace/mongo_backup
